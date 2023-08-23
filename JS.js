@@ -27,7 +27,7 @@ let app = {
     this.currentPosition = 0;
     this.score = 0; // property to keep track of score
 
-    // get alternatives
+    // get alternative questions
     let alts = document.querySelectorAll(".alternative");
 
     alts.forEach((element, index) => {
@@ -61,12 +61,12 @@ let app = {
     let currentQuestion = questions[this.currentPosition];
 
     if (currentQuestion.correctAnswer == userSelected) {
-      // correct
+      // correct answer
       console.log("correct");
       this.score++;
       this.showResult(true);
     } else {
-      // not correct
+      // incorrect answer
       console.log("wrong");
       this.showResult(false);
     }
